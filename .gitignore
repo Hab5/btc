@@ -1,0 +1,8 @@
+.cache
+compile_commands.json
+.vscode
+.dumbjump
+
+.dir-locals.el
+.gdb_history
+bitcoin

@@ -1,0 +1,34 @@
+ #+TITLE: Bitcoin
+
+* Keys
+* Script
+* Transaction
+** Version
+ + [01000000] (4 bytes Little-Endian)
+** Inputs
+ + [01] Number of TxIn (CompactSize)
+*** TxIn
++ [0123449fad6289dda5365a197fa822e320cdfc106bed243bf773cac64cfdb237] TxIn's TxId (32 bytes) Reversed!
++ [05000000] TxId index (4 bytes Little-Endian)
++ [6a] Unlocking Script length (CompactSize)
++ Unlocking Script
+  - [47] Signature length (ScriptNum)
+  - [<DER-SIG>] Der encoded signature
+  - [21] Public Key length (ScriptNum)
+  - [<PKEY>] Public Key
++ [feffffff] Sequence (4 bytes)
+** Outputs
++ [02] Number of TxOut (CompactSize)
+*** TxOut
+  + [0021390000000000] Amount in satoshis (8 bytes Little-Endian)
+  + [19] Locking Script length (CompactSize)
+  + Locking Script
+    * [76] OP_DUP
+    * [a9] OP_HASH160
+    * [14] PubKey Hash160 Length (ScriptNum)
+    * [<RECIPIENT_ADDRESS>] PubKey Hash160
+    * [88] OP_EQUALVERIFY
+    * [ac] OP_CHECKSIG
+** Locktime
++ [2c480700] Locktime (< 500m = Block Height || > 500m = Unix epoch time)
+* Network
