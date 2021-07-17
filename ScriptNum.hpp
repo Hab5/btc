@@ -1,11 +1,13 @@
 #pragma once
 
 #include <iostream>
+#include <limits>
 #include <vector>
 #include <algorithm>
 #include <cassert>
 
 // https://github.com/bitcoin/bitcoin/blob/v0.10.1/src/script/script.h#L180
+
 
 static const size_t SCRIPT_NUM_MAX_BYTES  = 4;
 
